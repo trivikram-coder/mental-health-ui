@@ -2,13 +2,17 @@ import React from 'react';
 import ChatWindow from '../components/ChatWindow';
 import MoodTracker from '../components/MoodTracker';
 import ResourcesSidebar from '../components/ResourcesSidebar';
+import ThemeToggle from '../components/ThemeToggle';
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-gradient-main">
       <div className="container mx-auto px-4 py-6">
         {/* Header */}
-        <header className="text-center mb-8">
+        <header className="text-center mb-8 relative">
+          <div className="absolute top-0 right-0">
+            <ThemeToggle />
+          </div>
           <h1 className="text-3xl font-bold text-foreground mb-2">
             Student Mental Health Chatbot
           </h1>
