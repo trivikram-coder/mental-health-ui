@@ -22,6 +22,7 @@ export default {
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
+          light: "hsl(var(--primary-light))",
         },
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
@@ -47,6 +48,15 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        // Mental health chatbot specific colors
+        'bot-bubble': "hsl(var(--bot-bubble))",
+        'bot-bubble-foreground': "hsl(var(--bot-bubble-foreground))",
+        'user-bubble': "hsl(var(--user-bubble))",
+        'user-bubble-foreground': "hsl(var(--user-bubble-foreground))",
+        'mood-happy': "hsl(var(--mood-happy))",
+        'mood-neutral': "hsl(var(--mood-neutral))",
+        'mood-sad': "hsl(var(--mood-sad))",
+        'mood-angry': "hsl(var(--mood-angry))",
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
@@ -57,6 +67,15 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+      },
+      backgroundImage: {
+        'gradient-main': 'var(--gradient-main)',
+        'gradient-chat': 'var(--gradient-chat)',
+        'gradient-sidebar': 'var(--gradient-sidebar)',
+      },
+      transitionProperty: {
+        'smooth': 'var(--transition-smooth)',
+        'bounce': 'var(--transition-bounce)',
       },
       borderRadius: {
         lg: "var(--radius)",
