@@ -12,13 +12,19 @@ const ChatWindow = () => {
   ]);
   const [inputValue, setInputValue] = useState('');
   const messagesEndRef = useRef(null);
+  const isInitialMount = useRef(true);
 
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
   };
 
   useEffect(() => {
-    scrollToBottom();
+    // Don't auto-scroll on initial mount, only when new messages are added
+    if (!isInitialMount.current) {
+      scrollToBottom();
+    } else {
+      isInitialMount.current = false;
+    }
   }, [messages]);
 
   const handleSendMessage = () => {
